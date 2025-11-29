@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operations &mdash; Colorisator 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=aa07bf4f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/custom.js?v=6f28f430"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Gradient" href="gradient.html" />
+    <link rel="prev" title="Choose your flavor" href="flavor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Colorisator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flavor.html">Choose your flavor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#darken-lighten">darken / lighten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tint-shade">tint / shade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saturate-desaturate">saturate / desaturate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adjust-hue">adjust_hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grayscale">grayscale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#complement">complement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invert">invert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gradient.html">Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="palettes.html">Palette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright © 2025 Colorisator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">colorisator</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Colorisator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Operations</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="operations">
+<h1>Operations<a class="headerlink" href="#operations" title="Link to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="p">(</span> <span class="s2">&quot;#64B5F6&quot;</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="p">(</span> <span class="s2">&quot;#6F1&quot;</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="p">(</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">246</span><span class="p">)</span> <span class="p">)</span>
+<span class="c1"># or any color</span>
+</pre></div>
+</div>
+<section id="darken-lighten">
+<h2>darken / lighten<a class="headerlink" href="#darken-lighten" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">darken</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">lighten</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="darken" src="../_images/darken.png" />
+<img alt="lighten" src="../_images/lighten.png" /></p>
+</section>
+<section id="tint-shade">
+<h2>tint / shade<a class="headerlink" href="#tint-shade" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">tint</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">shade</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="tint" src="../_images/tint.png" />
+<img alt="shade" src="../_images/shade.png" /></p>
+</section>
+<section id="saturate-desaturate">
+<h2>saturate / desaturate<a class="headerlink" href="#saturate-desaturate" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">saturate</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">desaturate</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="saturate" src="../_images/saturate.png" />
+<img alt="desaturate" src="../_images/desaturate.png" /></p>
+</section>
+<section id="adjust-hue">
+<h2>adjust_hue<a class="headerlink" href="#adjust-hue" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">adjust_hue</span><span class="p">(</span><span class="mi">30</span><span class="o">/</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="adjust_hue" src="../_images/adjust_hue.png" /></p>
+</section>
+<section id="grayscale">
+<h2>grayscale<a class="headerlink" href="#grayscale" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">grayscale</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="grayscale" src="../_images/grayscale.png" /></p>
+</section>
+<section id="complement">
+<h2>complement<a class="headerlink" href="#complement" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="complement" src="../_images/complement.png" /></p>
+</section>
+<section id="invert">
+<h2>invert<a class="headerlink" href="#invert" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">invert</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="invert" src="../_images/invert.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="flavor.html" class="btn btn-neutral float-left" title="Choose your flavor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gradient.html" class="btn btn-neutral float-right" title="Gradient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> 2025, Richard Carlier.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

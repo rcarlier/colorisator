@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>colorisator package &mdash; Colorisator 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=aa07bf4f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/custom.js?v=6f28f430"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="prev" title="colorisator" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Colorisator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basics.html">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/flavor.html">Choose your flavor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/operations.html">Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/gradient.html">Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/palettes.html">Palette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright © 2025 Colorisator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">colorisator</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">colorisator package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colorisator-colorisator-module">colorisator.colorisator module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-colorisator">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#colorisator.Colorisator"><code class="docutils literal notranslate"><span class="pre">Colorisator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#colorisator.ColorisatorFormat"><code class="docutils literal notranslate"><span class="pre">ColorisatorFormat</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Colorisator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">colorisator</a></li>
+      <li class="breadcrumb-item active">colorisator package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="colorisator-package">
+<h1>colorisator package<a class="headerlink" href="#colorisator-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="colorisator-colorisator-module">
+<h2>colorisator.colorisator module<a class="headerlink" href="#colorisator-colorisator-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-colorisator">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-colorisator" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="colorisator.Colorisator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">colorisator.</span></span><span class="sig-name descname"><span class="pre">Colorisator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.adjust_hue">
+<span class="sig-name descname"><span class="pre">adjust_hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.adjust_hue" title="Link to this definition"></a></dt>
+<dd><p>Shift the hue of a color on the color wheel.</p>
+<a class="reference internal image-reference" href="_images/adjust_hue.png"><img alt="Adjust hue" src="_images/adjust_hue.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to adjust (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>amount</strong> – Amount to shift hue (0.0 to 1.0, wraps around)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Color with adjusted hue in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.complement">
+<span class="sig-name descname"><span class="pre">complement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.complement" title="Link to this definition"></a></dt>
+<dd><p>Get the complementary color (opposite on the color wheel).</p>
+<a class="reference internal image-reference" href="_images/complement.png"><img alt="Complement" src="_images/complement.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to find complement for (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Complementary color in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.darken">
+<span class="sig-name descname"><span class="pre">darken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.darken" title="Link to this definition"></a></dt>
+<dd><p>Decrease the lightness of a color.</p>
+<a class="reference internal image-reference" href="_images/darken.png"><img alt="Darken" src="_images/darken.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to darken (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>amount</strong> – Amount to darken (0.0 to 1.0). Defaults to 0.1.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Darkened color in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.desaturate">
+<span class="sig-name descname"><span class="pre">desaturate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.desaturate" title="Link to this definition"></a></dt>
+<dd><p>Decrease the saturation of a color.</p>
+<a class="reference internal image-reference" href="_images/desaturate.png"><img alt="Desaturate" src="_images/desaturate.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to desaturate (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>amount</strong> – Amount to decrease saturation (0.0 to 1.0). Defaults to 0.1.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Less saturated color in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_hex">
+<span class="sig-name descname"><span class="pre">get_hex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_hex" title="Link to this definition"></a></dt>
+<dd><p>Get color as hexadecimal string (without alpha).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hex color string in format #RRGGBB</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_hex_alpha">
+<span class="sig-name descname"><span class="pre">get_hex_alpha</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_hex_alpha" title="Link to this definition"></a></dt>
+<dd><p>Get color as hexadecimal string including alpha channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hex color string in format #RRGGBBAA</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_hsl">
+<span class="sig-name descname"><span class="pre">get_hsl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_hsl" title="Link to this definition"></a></dt>
+<dd><p>Get color as HSL (Hue, Saturation, Lightness) values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple of (hue, saturation, lightness) as floats between 0.0 and 1.0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_rgb">
+<span class="sig-name descname"><span class="pre">get_rgb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_rgb" title="Link to this definition"></a></dt>
+<dd><p>Get RGB color values normalized between 0.0 and 1.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple of (red, green, blue) as floats between 0.0 and 1.0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_rgb255">
+<span class="sig-name descname"><span class="pre">get_rgb255</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_rgb255" title="Link to this definition"></a></dt>
+<dd><p>Get RGB color values as integers between 0 and 255.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple of (red, green, blue) as integers between 0 and 255</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_rgba">
+<span class="sig-name descname"><span class="pre">get_rgba</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_rgba" title="Link to this definition"></a></dt>
+<dd><p>Get RGBA color values normalized between 0.0 and 1.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple of (red, green, blue, alpha) as floats between 0.0 and 1.0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.get_web">
+<span class="sig-name descname"><span class="pre">get_web</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.get_web" title="Link to this definition"></a></dt>
+<dd><p>Get color as web-optimized hex string (shorthand when possible).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hex color string in format #RGB or #RRGGBB (shortened when possible)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.gradient">
+<span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.gradient" title="Link to this definition"></a></dt>
+<dd><p>Generate a smooth color gradient between two colors.</p>
+<a class="reference internal image-reference" href="_images/gradient.png"><img alt="Gradient" src="_images/gradient.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_start</strong> – Starting color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>end</strong> – Ending color (Colorisator instance or any valid color format). Defaults to None.</p></li>
+<li><p><strong>steps</strong> – Number of color steps in the gradient. Defaults to 5.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If end color is not provided</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of colors forming a smooth gradient from start to end</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.gradient_stops">
+<span class="sig-name descname"><span class="pre">gradient_stops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.gradient_stops" title="Link to this definition"></a></dt>
+<dd><p>Generate a multi-stop gradient passing through multiple colors.</p>
+<a class="reference internal image-reference" href="_images/gradient_stops.png"><img alt="Gradient stops" src="_images/gradient_stops.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_start</strong> – Starting color or list of all colors (Colorisator instances or any valid color formats)</p></li>
+<li><p><strong>stops</strong> – List of intermediate/ending colors. Defaults to None.</p></li>
+<li><p><strong>steps</strong> – Total number of color steps in the gradient. Defaults to 5.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If stops is None when calling on an instance, or if less than 2 colors provided</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of colors forming a smooth gradient through all color stops</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.grayscale">
+<span class="sig-name descname"><span class="pre">grayscale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.grayscale" title="Link to this definition"></a></dt>
+<dd><p>Convert a color to grayscale by removing all saturation.</p>
+<a class="reference internal image-reference" href="_images/grayscale.png"><img alt="Grayscale" src="_images/grayscale.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to convert (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Grayscale version of the color in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.invert">
+<span class="sig-name descname"><span class="pre">invert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.invert" title="Link to this definition"></a></dt>
+<dd><p>Invert a color by subtracting each RGB component from 1.0.</p>
+<a class="reference internal image-reference" href="_images/invert.png"><img alt="Invert" src="_images/invert.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to invert (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Inverted color in the specified output format</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="p">(</span><span class="s2">&quot;#FF0000&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">invert</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">get_hex</span><span class="p">())</span>
+<span class="c1"># Output: #00FFFF</span>
+
+<span class="c1"># Using the static call</span>
+<span class="n">inv2</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="s2">&quot;#00FF00&quot;</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inv2</span><span class="p">)</span>
+<span class="c1"># Output: #00FFFF</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.lighten">
+<span class="sig-name descname"><span class="pre">lighten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.lighten" title="Link to this definition"></a></dt>
+<dd><p>Increase the lightness of a color.</p>
+<a class="reference internal image-reference" href="_images/lighten.png"><img alt="Lighten" src="_images/lighten.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to lighten (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>amount</strong> – Amount to lighten (0.0 to 1.0). Defaults to 0.1.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Lightened color in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_analogous">
+<span class="sig-name descname"><span class="pre">palette_analogous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_analogous" title="Link to this definition"></a></dt>
+<dd><p>Generate an analogous color scheme (3 adjacent colors on the color wheel).</p>
+<a class="reference internal image-reference" href="_images/palette_analogous.png"><img alt="Split-complementary palette" src="_images/palette_analogous.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of 3 adjacent colors forming an analogous scheme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_hue_shifts">
+<span class="sig-name descname"><span class="pre">palette_hue_shifts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shifts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_hue_shifts" title="Link to this definition"></a></dt>
+<dd><p>Generate a color palette by shifting hue at specified intervals.</p>
+<a class="reference internal image-reference" href="_images/palette_hue_shifts_int.png"><img alt="Triadic palette (from int)" src="_images/palette_hue_shifts_int.png" style="width: 600px;" />
+</a>
+<a class="reference internal image-reference" href="_images/palette_hue_shifts_array.png"><img alt="Triadic palette (from array)" src="_images/palette_hue_shifts_array.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>shifts</strong> – Number of colors to generate (int) or list of hue shift amounts (list of floats)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of colors with shifted hues in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_material">
+<span class="sig-name descname"><span class="pre">palette_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_material" title="Link to this definition"></a></dt>
+<dd><p>Generate a Material Design-style color palette with varying lightness.</p>
+<a class="reference internal image-reference" href="_images/palette_material.png"><img alt="Material palette" src="_images/palette_material.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>n</strong> – Number of color shades to generate. Defaults to 5.</p></li>
+<li><p><strong>max_delta</strong> – Maximum lightness variation from base color. Defaults to 0.2.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of colors ranging from darker to lighter shades</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_monochromatic">
+<span class="sig-name descname"><span class="pre">palette_monochromatic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_monochromatic" title="Link to this definition"></a></dt>
+<dd><p>Generate a monochromatic color palette (same hue, varying lightness).</p>
+<a class="reference internal image-reference" href="_images/palette_monochromatic.png"><img alt="Monochromatic palette" src="_images/palette_monochromatic.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>n</strong> – Number of colors to generate. Defaults to 3.</p></li>
+<li><p><strong>max_delta</strong> – Maximum lightness variation from base color. Defaults to 0.1.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of colors with same hue but different lightness values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_split_complementary">
+<span class="sig-name descname"><span class="pre">palette_split_complementary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_split_complementary" title="Link to this definition"></a></dt>
+<dd><p>Generate a split-complementary color scheme (base color + 2 colors adjacent to complement).</p>
+<a class="reference internal image-reference" href="_images/palette_split_complementary.png"><img alt="Split-complementary palette" src="_images/palette_split_complementary.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of 3 colors forming a split-complementary scheme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_tetradic">
+<span class="sig-name descname"><span class="pre">palette_tetradic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_tetradic" title="Link to this definition"></a></dt>
+<dd><p>Generate a tetradic color scheme (4 colors evenly spaced on the color wheel).</p>
+<a class="reference internal image-reference" href="_images/palette_tetradic.png"><img alt="Tetradic palette" src="_images/palette_tetradic.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of 4 colors forming a tetradic scheme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.palette_triadic">
+<span class="sig-name descname"><span class="pre">palette_triadic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.palette_triadic" title="Link to this definition"></a></dt>
+<dd><p>Generate a triadic color scheme (3 colors evenly spaced on the color wheel).</p>
+<a class="reference internal image-reference" href="_images/palette_triadic.png"><img alt="Triadic palette" src="_images/palette_triadic.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Base color (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns list of Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of 3 colors forming a triadic scheme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.saturate">
+<span class="sig-name descname"><span class="pre">saturate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.saturate" title="Link to this definition"></a></dt>
+<dd><p>Increase the saturation of a color.</p>
+<a class="reference internal image-reference" href="_images/saturate.png"><img alt="Saturate" src="_images/saturate.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self_or_color</strong> – Color to saturate (Colorisator instance or any valid color format)</p></li>
+<li><p><strong>amount</strong> – Amount to increase saturation (0.0 to 1.0). Defaults to 0.1.</p></li>
+<li><p><strong>output</strong> – Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>More saturated color in the specified output format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.shade">
+<span class="sig-name descname"><span class="pre">shade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.shade" title="Link to this definition"></a></dt>
+<dd><p>Mix color with black to create a shade.</p>
+<a class="reference internal image-reference" href="_images/shade.png"><img alt="Shade" src="_images/shade.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> – Amount of black to mix (0.0 to 1.0). Defaults to 0.1.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>New Colorisator instance with the shaded color</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.tint">
+<span class="sig-name descname"><span class="pre">tint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.tint" title="Link to this definition"></a></dt>
+<dd><p>Mix color with white to create a tint.</p>
+<a class="reference internal image-reference" href="_images/tint.png"><img alt="Tint" src="_images/tint.png" style="width: 600px;" />
+</a>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> – Amount of white to mix (0.0 to 1.0). Defaults to 0.1.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>New Colorisator instance with the tinted color</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.to_processing">
+<span class="sig-name descname"><span class="pre">to_processing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.to_processing" title="Link to this definition"></a></dt>
+<dd><p>Export color as Processing color() declaration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>String containing Processing code to declare this color</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="colorisator.Colorisator.to_unity">
+<span class="sig-name descname"><span class="pre">to_unity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.Colorisator.to_unity" title="Link to this definition"></a></dt>
+<dd><p>Export color as Unity C# Color declaration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>String containing Unity C# code to declare this color</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">colorisator.</span></span><span class="sig-name descname"><span class="pre">ColorisatorFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#colorisator.ColorisatorFormat" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.HEX">
+<span class="sig-name descname"><span class="pre">HEX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hex'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.HEX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.HEXALPHA">
+<span class="sig-name descname"><span class="pre">HEXALPHA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hexalpha'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.HEXALPHA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.HSL">
+<span class="sig-name descname"><span class="pre">HSL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hsl'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.HSL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.PROCESSING">
+<span class="sig-name descname"><span class="pre">PROCESSING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'processing'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.PROCESSING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.RGB">
+<span class="sig-name descname"><span class="pre">RGB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'rgb'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.RGB" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.RGB255">
+<span class="sig-name descname"><span class="pre">RGB255</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'rgb255'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.RGB255" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.RGBA">
+<span class="sig-name descname"><span class="pre">RGBA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'rgba'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.RGBA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.UNITY">
+<span class="sig-name descname"><span class="pre">UNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unity'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.UNITY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="colorisator.ColorisatorFormat.WEB">
+<span class="sig-name descname"><span class="pre">WEB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'web'</span></em><a class="headerlink" href="#colorisator.ColorisatorFormat.WEB" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="colorisator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2025, Richard Carlier.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

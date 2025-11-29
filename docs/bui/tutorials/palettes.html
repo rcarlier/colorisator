@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palette &mdash; Colorisator 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=aa07bf4f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/custom.js?v=6f28f430"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Copyright © 2025 Colorisator" href="../copyright.html" />
+    <link rel="prev" title="Gradient" href="gradient.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Colorisator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flavor.html">Choose your flavor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradient.html">Gradient</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Palette</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#monochromatic">Monochromatic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analogous">Analogous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hue-shifts-integer-array">Hue Shifts (integer, array)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#triadic">Triadic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tetradic">Tetradic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#split-complementary">Split Complementary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright © 2025 Colorisator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">colorisator</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Colorisator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Palette</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="palette">
+<h1>Palette<a class="headerlink" href="#palette" title="Link to this heading"></a></h1>
+<section id="monochromatic">
+<h2>Monochromatic<a class="headerlink" href="#monochromatic" title="Link to this heading"></a></h2>
+<p>Generate a monochromatic color palette (same hue, varying lightness).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_monochromatic</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_monochromatic" src="../_images/palette_monochromatic.png" /></p>
+</section>
+<section id="analogous">
+<h2>Analogous<a class="headerlink" href="#analogous" title="Link to this heading"></a></h2>
+<p>Generate an analogous color scheme (3 adjacent colors on the color wheel).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_analogous</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_analogous" src="../_images/palette_analogous.png" /></p>
+</section>
+<section id="hue-shifts-integer-array">
+<h2>Hue Shifts (integer, array)<a class="headerlink" href="#hue-shifts-integer-array" title="Link to this heading"></a></h2>
+<p>Generate a color palette by shifting hue at specified intervals.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_hue_shifts</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">shifts</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_hue_shifts</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">shifts</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_hue_shifts_int" src="../_images/palette_hue_shifts_int.png" />
+<img alt="palette_hue_shifts_array" src="../_images/palette_hue_shifts_array.png" /></p>
+</section>
+<section id="triadic">
+<h2>Triadic<a class="headerlink" href="#triadic" title="Link to this heading"></a></h2>
+<p>Generate a triadic color scheme (3 colors evenly spaced on the color wheel).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_triadic</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_triadic" src="../_images/palette_triadic.png" />
+Generate a tetradic color scheme (4 colors evenly spaced on the color wheel).</p>
+</section>
+<section id="tetradic">
+<h2>Tetradic<a class="headerlink" href="#tetradic" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_tetradic</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_tetradic" src="../_images/palette_tetradic.png" /></p>
+</section>
+<section id="split-complementary">
+<h2>Split Complementary<a class="headerlink" href="#split-complementary" title="Link to this heading"></a></h2>
+<p>Generate a split-complementary color scheme (base color + 2 colors adjacent to complement).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_split_complementary</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_split_complementary" src="../_images/palette_split_complementary.png" /></p>
+</section>
+<section id="material">
+<h2>Material<a class="headerlink" href="#material" title="Link to this heading"></a></h2>
+<p>Generate a Material Design-style color palette with varying lightness.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">Colorisator</span><span class="o">.</span><span class="n">palette_material</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">ColorisatorFormat</span><span class="o">.</span><span class="n">HEX</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="palette_material" src="../_images/palette_material.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gradient.html" class="btn btn-neutral float-left" title="Gradient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../copyright.html" class="btn btn-neutral float-right" title="Copyright © 2025 Colorisator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> 2025, Richard Carlier.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

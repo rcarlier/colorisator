@@ -1,0 +1,6 @@
+Copyright © 2025 Colorisator
+----------------------------
+
+* `GitHub repository <https://github.com/rcarlier/colorisator>`_
+* `Official website <https://github.com/rcarlier/colorisator>`_
+* `Author <https://www.linkedin.com/in/rcarlier/>`_

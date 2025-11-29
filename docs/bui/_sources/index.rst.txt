@@ -22,7 +22,6 @@ and gradients. Use this documentation to explore all features.
    tutorials/operations
    tutorials/gradient
    tutorials/palettes
-
    copyright
 
    modules
@@ -39,5 +38,5 @@ Project links
 -------------
 
 * `GitHub repository <https://github.com/rcarlier/colorisator>`_
+* `Official website <https://github.com/rcarlier/colorisator>`_
 * `Author <https://www.linkedin.com/in/rcarlier/>`_
-* `Read The Docs <https://colorisator.readthedocs.io/en/latest/index.html>`_
