@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "colorisator"
-version = "1.0.0"
+version = "1.0.1"
 description = "A powerful Python library for color manipulation and palette generation"
-readme = "README.md"
+readme = "README_PYPI.md"
 authors = [{ name = "Richard Carlier", email = "carlier.formation@gmail.com" }]
 license = { text = "MIT" }
 classifiers = [
