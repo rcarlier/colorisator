@@ -18,6 +18,9 @@ print("hsl       :", color.get_hsl())
 print("web       :", color.get_web())
 
 print("\nOPERATIONS")
+
+
+color = Colorisator("#3543CA")
 amount = 0.3
 
 print(f"darken     {amount} :", color.darken(amount).get_hex())
@@ -56,3 +59,12 @@ if Colorisator("#E1000F") == "#E1000F":
     print("Humm?")
 else:
     print("They are different !!!")
+
+
+
+
+color = Colorisator("#FF8080")
+print("complement     :", color.complement().get_hex())
+print("invert         :", color.invert().get_hex())
+
+

@@ -1,0 +1,40 @@
+
+Welcome to Colorisator's documentation!
+=======================================
+
+Colorisator is a Python library for managing, manipulating, and generating colors.
+It supports multiple formats (HEX, RGB, HSL, etc.), color operations, palettes,
+and gradients. Use this documentation to explore all features.
+
+.. image:: _static/gradient.png
+   :alt: Colorisator gradient
+   :align: center
+   :width: 500px
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   tutorials/installation
+   tutorials/basics
+   tutorials/flavor
+   tutorials/operations
+   tutorials/gradient
+   tutorials/palettes
+
+   modules
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+
+Project links
+-------------
+
+* `GitHub repository <https://github.com/rcarlier/colorisator>`_
+* `Official website <https://github.com/rcarlier/colorisator>`_

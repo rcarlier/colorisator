@@ -1,6 +1,5 @@
 """Tests for the Colorisator class."""
 
-import pytest
 from colorisator import Colorisator, ColorisatorFormat
 
 
@@ -164,32 +163,32 @@ class TestColorisatorPalettes:
     def test_triadic(self):
         """Test triadic palette generation."""
         color = Colorisator("#FF0000")
-        palette = color.triadic()
+        palette = color.palette_triadic()
         assert len(palette) == 3
         assert isinstance(palette[0], Colorisator)
 
     def test_tetradic(self):
         """Test tetradic palette generation."""
         color = Colorisator("#FF0000")
-        palette = color.tetradic()
+        palette = color.palette_tetradic()
         assert len(palette) == 4
 
     def test_analogous(self):
         """Test analogous palette generation."""
         color = Colorisator("#FF0000")
-        palette = color.analogous()
+        palette = color.palette_analogous()
         assert len(palette) == 3
 
     def test_monochromatic(self):
         """Test monochromatic palette generation."""
         color = Colorisator("#FF0000")
-        palette = color.monochromatic(n=5)
+        palette = color.palette_monochromatic(n=5)
         assert len(palette) == 5
 
     def test_material_palette(self):
         """Test material palette generation."""
         color = Colorisator("#FF0000")
-        palette = color.material_palette(n=5)
+        palette = color.palette_material(n=5)
         assert len(palette) == 5
 
 

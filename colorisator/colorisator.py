@@ -88,7 +88,7 @@ class Colorisator:
 
         raise ValueError("Unsupported format")
 
-    def _update_from_hsl(self, h, l, s):
+    def _update_from_hls(self, h, l, s):
         r, g, b = colorsys.hls_to_rgb(h, l, s)
         obj = Colorisator((r, g, b, self.a))
         obj.h, obj.l, obj.s = h, l, s
@@ -137,6 +137,20 @@ class Colorisator:
         if single:
             return result[0]
         return result
+
+    def _lerp(self_or_start, other, t, output=None):
+        if isinstance(self_or_start, Colorisator):
+            start = self_or_start
+        else:
+            start = Colorisator(self_or_start)
+        end = Colorisator._from_any(other)
+
+        r = start.r + (end.r - start.r) * t
+        g = start.g + (end.g - start.g) * t
+        b = start.b + (end.b - start.b) * t
+        a = start.a + (end.a - start.a) * t
+        new_color = Colorisator((r, g, b, a))
+        return Colorisator._format_output(new_color, output)
 
     def _unity_value(self):
         r, g, b = self.get_rgb()
@@ -232,6 +246,10 @@ class Colorisator:
     def lighten(self_or_color, amount=0.1, output=None):
         """Increase the lightness of a color.
 
+        .. image:: _static/lighten.png
+            :width: 600
+            :alt: Lighten
+
         Args:
             self_or_color: Color to lighten (Colorisator instance or any valid color format)
             amount: Amount to lighten (0.0 to 1.0). Defaults to 0.1.
@@ -247,11 +265,15 @@ class Colorisator:
 
         h, l, s = color.h, color.l, color.s
         l = min(1, l + amount)
-        new_color = color._update_from_hsl(h, l, s)
+        new_color = color._update_from_hls(h, l, s)
         return Colorisator._format_output(new_color, output)
 
     def darken(self_or_color, amount=0.1, output=None):
         """Decrease the lightness of a color.
+
+        .. image:: _static/darken.png
+            :width: 600
+            :alt: Darken
 
         Args:
             self_or_color: Color to darken (Colorisator instance or any valid color format)
@@ -268,11 +290,15 @@ class Colorisator:
 
         h, l, s = color.h, color.l, color.s
         l = max(0, l - amount)
-        new_color = color._update_from_hsl(h, l, s)
+        new_color = color._update_from_hls(h, l, s)
         return Colorisator._format_output(new_color, output)
 
-    def tint(self, amount=0.1):
+    def tint(self_or_color, amount=0.1, output=None):
         """Mix color with white to create a tint.
+
+        .. image:: _static/tint.png
+            :width: 600
+            :alt: Tint
 
         Args:
             amount: Amount of white to mix (0.0 to 1.0). Defaults to 0.1.
@@ -280,13 +306,24 @@ class Colorisator:
         Returns:
             New Colorisator instance with the tinted color
         """
-        r = self.r + (1 - self.r) * amount
-        g = self.g + (1 - self.g) * amount
-        b = self.b + (1 - self.b) * amount
-        return Colorisator((r, g, b, self.a))
+        if isinstance(self_or_color, Colorisator):
+            color = self_or_color
+        else:
+            color = Colorisator(self_or_color)
 
-    def shade(self, amount=0.1):
+        r = color.r + (1 - color.r) * amount
+        g = color.g + (1 - color.g) * amount
+        b = color.b + (1 - color.b) * amount
+        new_color = Colorisator((r, g, b))
+        return Colorisator._format_output(new_color, output)
+
+
+    def shade(self_or_color, amount=0.1, output=None):
         """Mix color with black to create a shade.
+
+        .. image:: _static/shade.png
+            :width: 600
+            :alt: Shade
 
         Args:
             amount: Amount of black to mix (0.0 to 1.0). Defaults to 0.1.
@@ -294,13 +331,23 @@ class Colorisator:
         Returns:
             New Colorisator instance with the shaded color
         """
-        r = self.r * (1 - amount)
-        g = self.g * (1 - amount)
-        b = self.b * (1 - amount)
-        return Colorisator((r, g, b, self.a))
+        if isinstance(self_or_color, Colorisator):
+            color = self_or_color
+        else:
+            color = Colorisator(self_or_color)
+
+        r = color.r * (1 - amount)
+        g = color.g * (1 - amount)
+        b = color.b * (1 - amount)
+        new_color = Colorisator((r, g, b))
+        return Colorisator._format_output(new_color, output)
 
     def saturate(self_or_color, amount=0.1, output=None):
         """Increase the saturation of a color.
+
+        .. image:: _static/saturate.png
+            :width: 600
+            :alt: Saturate
 
         Args:
             self_or_color: Color to saturate (Colorisator instance or any valid color format)
@@ -317,11 +364,15 @@ class Colorisator:
 
         h, l, s = color.h, color.l, color.s
         s = min(1, s + amount)
-        new_color = color._update_from_hsl(h, l, s)
+        new_color = color._update_from_hls(h, l, s)
         return Colorisator._format_output(new_color, output)
 
     def desaturate(self_or_color, amount=0.1, output=None):
         """Decrease the saturation of a color.
+
+        .. image:: _static/desaturate.png
+            :width: 600
+            :alt: Desaturate
 
         Args:
             self_or_color: Color to desaturate (Colorisator instance or any valid color format)
@@ -338,11 +389,15 @@ class Colorisator:
 
         h, l, s = color.h, color.l, color.s
         s = max(0, s - amount)
-        new_color = color._update_from_hsl(h, l, s)
+        new_color = color._update_from_hls(h, l, s)
         return Colorisator._format_output(new_color, output)
 
     def adjust_hue(self_or_color, amount, output=None):
         """Shift the hue of a color on the color wheel.
+
+        .. image:: _static/adjust_hue.png
+            :width: 600
+            :alt: Adjust hue
 
         Args:
             self_or_color: Color to adjust (Colorisator instance or any valid color format)
@@ -359,11 +414,15 @@ class Colorisator:
 
         h, l, s = color.h, color.l, color.s
         h = (h + amount) % 1.0
-        new_color = color._update_from_hsl(h, l, s)
+        new_color = color._update_from_hls(h, l, s)
         return Colorisator._format_output(new_color, output)
 
     def grayscale(self_or_color, output=None):
         """Convert a color to grayscale by removing all saturation.
+
+        .. image:: _static/grayscale.png
+            :width: 600
+            :alt: Grayscale
 
         Args:
             self_or_color: Color to convert (Colorisator instance or any valid color format)
@@ -379,11 +438,15 @@ class Colorisator:
 
         h, l, s = color.h, color.l, color.s
         s = 0
-        new_color = color._update_from_hsl(h, l, s)
+        new_color = color._update_from_hls(h, l, s)
         return Colorisator._format_output(new_color, output)
 
     def complement(self_or_color, output=None):
         """Get the complementary color (opposite on the color wheel).
+
+        .. image:: _static/complement.png
+            :width: 600
+            :alt: Complement
 
         Args:
             self_or_color: Color to find complement for (Colorisator instance or any valid color format)
@@ -402,12 +465,28 @@ class Colorisator:
     def invert(self_or_color, output=None):
         """Invert a color by subtracting each RGB component from 1.0.
 
+        .. image:: _static/invert.png
+            :width: 600
+            :alt: Invert
+
         Args:
             self_or_color: Color to invert (Colorisator instance or any valid color format)
             output: Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).
 
         Returns:
             Inverted color in the specified output format
+
+        Example:
+            .. code-block:: python
+
+                c = Colorisator("#FF0000").invert()
+                print(c.get_hex())
+                # Output: #00FFFF
+
+                # Using the static call
+                inv2 = Colorisator.invert("#00FF00", output=ColorisatorFormat.HEX)
+                print(inv2)
+                # Output: #00FFFF
         """
         if isinstance(self_or_color, Colorisator):
             color = self_or_color
@@ -416,33 +495,16 @@ class Colorisator:
         new_color = Colorisator((1 - color.r, 1 - color.g, 1 - color.b, color.a))
         return Colorisator._format_output(new_color, output)
 
-    def lerp(self_or_start, other, t, output=None):
-        """Linear interpolation between two colors.
-
-        Args:
-            self_or_start: Starting color (Colorisator instance or any valid color format)
-            other: Ending color (Colorisator instance or any valid color format)
-            t: Interpolation factor (0.0 = start color, 1.0 = end color)
-            output: Output format (ColorisatorFormat or string). Defaults to None (returns Colorisator).
-
-        Returns:
-            Interpolated color in the specified output format
-        """
-        if isinstance(self_or_start, Colorisator):
-            start = self_or_start
-        else:
-            start = Colorisator(self_or_start)
-        end = Colorisator._from_any(other)
-
-        r = start.r + (end.r - start.r) * t
-        g = start.g + (end.g - start.g) * t
-        b = start.b + (end.b - start.b) * t
-        a = start.a + (end.a - start.a) * t
-        new_color = Colorisator((r, g, b, a))
-        return Colorisator._format_output(new_color, output)
-
     def palette_hue_shifts(self_or_color, shifts, output=None):
         """Generate a color palette by shifting hue at specified intervals.
+
+        .. image:: _static/palette_hue_shifts_int.png
+            :width: 600
+            :alt: Triadic palette (from int)
+
+        .. image:: _static/palette_hue_shifts_array.png
+            :width: 600
+            :alt: Triadic palette (from array)
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -462,11 +524,15 @@ class Colorisator:
             n = shifts
             shifts = [(i / n) for i in range(n)]
 
-        colors = [color._update_from_hsl((h + shift) % 1.0, l, s) for shift in shifts]
+        colors = [color._update_from_hls((h + shift) % 1.0, l, s) for shift in shifts]
         return Colorisator._format_output(colors, output)
 
-    def triadic(self_or_color, output=None):
+    def palette_triadic(self_or_color, output=None):
         """Generate a triadic color scheme (3 colors evenly spaced on the color wheel).
+
+        .. image:: _static/palette_triadic.png
+            :width: 600
+            :alt: Triadic palette
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -477,8 +543,12 @@ class Colorisator:
         """
         return Colorisator.palette_hue_shifts(self_or_color, 3, output)
 
-    def tetradic(self_or_color, output=None):
+    def palette_tetradic(self_or_color, output=None):
         """Generate a tetradic color scheme (4 colors evenly spaced on the color wheel).
+
+        .. image:: _static/palette_tetradic.png
+            :width: 600
+            :alt: Tetradic palette
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -489,8 +559,12 @@ class Colorisator:
         """
         return Colorisator.palette_hue_shifts(self_or_color, 4, output)
 
-    def split_complementary(self_or_color, output=None):
+    def palette_split_complementary(self_or_color, output=None):
         """Generate a split-complementary color scheme (base color + 2 colors adjacent to complement).
+
+        .. image:: _static/palette_split_complementary.png
+            :width: 600
+            :alt: Split-complementary palette
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -501,8 +575,12 @@ class Colorisator:
         """
         return Colorisator.palette_hue_shifts(self_or_color, [0, 5/12, 0.5], output)
 
-    def analogous(self_or_color, output=None):
+    def palette_analogous(self_or_color, output=None):
         """Generate an analogous color scheme (3 adjacent colors on the color wheel).
+
+        .. image:: _static/palette_analogous.png
+            :width: 600
+            :alt: Split-complementary palette
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -513,8 +591,12 @@ class Colorisator:
         """
         return Colorisator.palette_hue_shifts(self_or_color, [0, 1/12, 2/12], output)
 
-    def monochromatic(self_or_color, n=3, max_delta=0.1, output=None):
+    def palette_monochromatic(self_or_color, n=3, max_delta=0.1, output=None):
         """Generate a monochromatic color palette (same hue, varying lightness).
+
+        .. image:: _static/palette_monochromatic.png
+            :width: 600
+            :alt: Monochromatic palette
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -535,11 +617,15 @@ class Colorisator:
         else:
             step = 2 * max_delta / (n - 1)
             shades = [min(1, max(0, l - max_delta + i * step)) for i in range(n)]
-        colors = [color._update_from_hsl(h, new_l, s) for new_l in shades]
+        colors = [color._update_from_hls(h, new_l, s) for new_l in shades]
         return Colorisator._format_output(colors, output)
 
-    def material_palette(self_or_color, n=5, max_delta=0.2, output=None):
+    def palette_material(self_or_color, n=5, max_delta=0.2, output=None):
         """Generate a Material Design-style color palette with varying lightness.
+
+        .. image:: _static/palette_material.png
+            :width: 600
+            :alt: Material palette
 
         Args:
             self_or_color: Base color (Colorisator instance or any valid color format)
@@ -559,11 +645,15 @@ class Colorisator:
         colors = []
         for i in range(n):
             new_l = min(1, max(0, l - max_delta + i * step_size))
-            colors.append(color._update_from_hsl(h, new_l, s))
+            colors.append(color._update_from_hls(h, new_l, s))
         return Colorisator._format_output(colors, output)
 
-    def gradient(self_or_start, end=None, steps=5, output=None):
+    def gradient(self_or_start, end=None, steps=10, output=None):
         """Generate a smooth color gradient between two colors.
+
+        .. image:: _static/gradient.png
+            :width: 600
+            :alt: Gradient
 
         Args:
             self_or_start: Starting color (Colorisator instance or any valid color format)
@@ -586,11 +676,15 @@ class Colorisator:
         else:
             raise ValueError("End must be provided for the static call or instance")
 
-        grad = [start.lerp(end, i/(steps-1)) for i in range(steps)]
+        grad = [start._lerp(end, i/(steps-1)) for i in range(steps)]
         return Colorisator._format_output(grad, output)
 
-    def gradient_stops(self_or_start, stops=None, steps=5, output=None):
+    def gradient_stops(self_or_start, stops=None, steps=10, output=None):
         """Generate a multi-stop gradient passing through multiple colors.
+
+        .. image:: _static/gradient_stops.png
+            :width: 600
+            :alt: Gradient stops
 
         Args:
             self_or_start: Starting color or list of all colors (Colorisator instances or any valid color formats)
