@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colorisator"
+version = "1.0.0"
+description = "A powerful Python library for color manipulation and palette generation"
+readme = "README.md"
+authors = [{ name = "Richard Carlier", email = "carlier.formation@gmail.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics",
+]
+keywords = ["color", "palette", "gradient", "hsl", "rgb", "hex", "design"]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/rcarlier/colorisator"
+Documentation = "https://github.com/rcarlier/colorisator#readme"
+Repository = "https://github.com/rcarlier/colorisator"
+"Bug Tracker" = "https://github.com/rcarlier/colorisator/issues"
